@@ -18,3 +18,13 @@ CREATE TABLE
         stuID VARCHAR (10)
     );
 
+-- Craete Medical TABLE
+
+CREATE TABLE
+    Medical(
+        RefferenceID VARCHAR(10),
+        Date DATE,
+        Description VARCHAR(100),
+        stuID VARCHAR(10),
+        PRIMARY KEY(RefferenceID)
+    );

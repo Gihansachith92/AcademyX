@@ -9,3 +9,12 @@ CREATE TABLE
         PRIMARY KEY(LecturerID)
     );
 
+-- Create Quize Table
+
+CREATE TABLE
+    QUIZ(
+        quizeNo VARCHAR (5),
+        Marks INT(3),
+        stuID VARCHAR (10)
+    );
+

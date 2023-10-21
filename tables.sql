@@ -13,6 +13,7 @@
 Query OK, 0 rows affected (0.02 sec)
 
 
+
 CREATE TABLE eligibility(
     -> CAStatus VARCHAR(10),
     -> courseID varchar(10),

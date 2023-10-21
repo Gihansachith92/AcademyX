@@ -63,4 +63,13 @@ CREATE TABLE
          );    
 
 
+  -- admin table creation
+
+     CREATE TABLE admin(
+         adminID VARCHAR(5),
+         NIC INT,
+         PRIMARY KEY(adminID),
+         FOREIGN KEY (NIC) REFERENCES User(NIC)
+         );
+
 

@@ -1,8 +1,11 @@
  CREATE TABLE course
-    -> ( courseID VARCHAR(10),
+    -> ( 
+       courseID VARCHAR(10),
     -> Name VARCHAR(20),
-    -> Credit DECIMAL(3,2),
-    -> Week INT,
+    -> Credit INT,
+    -> Week INT ,
+       Theory INT,
+       Practical INT,
     -> stuID VARCHAR(10),
     -> DepID VARCHAR(5),
     -> LecturerId VARCHAR(10),
@@ -11,8 +14,6 @@
     -> FOREIGN KEY(LecturerId) REFERENCES lecturer(LecturerId),
     -> PRIMARY KEY(courseID));
 Query OK, 0 rows affected (0.02 sec)
-
-
 
 CREATE TABLE eligibility(
     -> CAStatus VARCHAR(10),

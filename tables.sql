@@ -6,6 +6,7 @@ CREATE TABLE User
     FirstName VARCHAR(20),
     LastName VARCHAR(20),
     DateOfBirth DATE,
+    Roles VARCHAR(20),
     PRIMARY KEY (NIC) );
 
 

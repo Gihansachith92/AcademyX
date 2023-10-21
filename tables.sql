@@ -45,14 +45,21 @@ CREATE TABLE
 
    -- Exam table creation
 
-  CREATE TABLE Exam(
-        ExamID VARCHAR(10),
-        mid VARCHAR(10),
-        final VARCHAR(10),
-        marks VARCHAR(10),
+  CREATE TABLE ExamMarks( 
+        Quiz1 decimal(3,2),
+        Quiz2 decimal(3,2),
+        Quiz3 decimal(3,2),
+        MidPractical decimal(3,2),
+        MidTheory decimal(3,2),
+        EndPractical decimal(3,2),
+        EndTheory decimal(3,2),
+        Assesments decimal(3,2),
         stuID VARCHAR(10),
-        PRIMARY KEY(ExamID),
-        FOREIGN KEY (stuID) REFERENCES Student(stuID)
+        courseID VARCHAR(10),
+        DepID VARCHAR(10),
+        FOREIGN KEY (stuID) REFERENCES Student(stuID),
+        FOREIGN KEY (courseID) REFERENCES Course(courseID),
+        FOREIGN KEY (DepID) REFERENCES Department(DepID)
          );    
 
 

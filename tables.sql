@@ -14,7 +14,7 @@ CREATE TABLE User
 
 CREATE TABLE Student
    (stuID VARCHAR(10),
-    GPA FLOAT,
+    States VARCHAR(20),
     NIC INT,
     PRIMARY KEY (stuID),
     FOREIGN KEY (NIC) REFERENCES User(NIC)  );

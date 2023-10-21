@@ -35,10 +35,11 @@ CREATE TABLE Assignment
 CREATE TABLE
     Lecturer(
         LecturerId VARCHAR (10),
-        LecName VARCHAR (50),
         NIC INT (15),
         DepID VARCHAR (10),
-        PRIMARY KEY(LecturerID)
+        PRIMARY KEY(LecturerID),
+        FOREIGN KEY (NIC) REFERENCES User(NIC),
+        FOREIGN KEY (DepID) REFERENCES Department(DepID)
     );
 
 

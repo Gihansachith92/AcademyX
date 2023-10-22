@@ -85,9 +85,7 @@ VALUES(
 );
 
 INSERT INTO admin
-VALUES(
-    ("Admin",3487);
-);
+VALUES ("Admin",3487);
 
  CREATE TABLE admin(
          adminID VARCHAR(20),

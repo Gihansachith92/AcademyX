@@ -74,7 +74,7 @@ CREATE TABLE notice(
 -- course details
 INSERT INTO course
 VALUES
-    ("ENG1222","English II",02,15,1,0,,"DpMUL","Lec006"),
+    ("ENG1222","English II",02,15,1,0,"DpMUL","Lec006"),
     ("ICT1212" ,"Database Management Systems Theory",02,15,1,0,"DpICT","Lec001"),
     ("ICT1222","Database Management Systems Practicum",02,15,0,1,"DpICT","Lec001"),
     ("ICT1233","Server-Side Web Development",03,15,0,1,"DpICT","Lec005"),

@@ -138,3 +138,15 @@ INSERT INTO User Values
 (6837 ,"hiruni888@gmail.com ", "hiruni" , "herath" ,"2001-05-13","Student","F");
 
 
+
+-- department table data insertion
+
+INSERT INTO Department VALUES 
+("DepICT" , "ICT Department"),
+("DepET" , "ET Department"),
+("DepMUL" , "Multideciplinary Dep");
+
+(
+
+
+

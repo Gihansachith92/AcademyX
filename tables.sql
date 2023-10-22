@@ -46,14 +46,14 @@ CREATE TABLE
    -- Exam table creation
 
   CREATE TABLE ExamMarks( 
-        Quiz1 decimal(3,2),
-        Quiz2 decimal(3,2),
-        Quiz3 decimal(3,2),
-        MidPractical decimal(3,2),
-        MidTheory decimal(3,2),
-        EndPractical decimal(3,2),
-        EndTheory decimal(3,2),
-        Assesments decimal(3,2),
+        Quiz1 INT,
+        Quiz2 INT,
+        Quiz3 INT,
+        MidPractical INT,
+        MidTheory INT,
+        EndPractical INT,
+        EndTheory INT,
+        Assesments INT,
         stuID VARCHAR(20),
         courseID VARCHAR(20),
         DepID VARCHAR(20),

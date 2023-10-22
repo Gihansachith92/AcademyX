@@ -13,7 +13,7 @@ CREATE TABLE User
 -- Student table creation
 
 CREATE TABLE Student
-   (stuID VARCHAR(10),
+   (stuID VARCHAR(20),
     States VARCHAR(20),
     NIC INT,
     PRIMARY KEY (stuID),
@@ -22,21 +22,21 @@ CREATE TABLE Student
 
 -- Assignment table creation
 
-CREATE TABLE Assignment
-   (AssignmentID VARCHAR(5),
-    courseID VARCHAR(10),
-    Marks FLOAT,
-    PRIMARY KEY (AssignmentID),
-    FOREIGN KEY (courseID) REFERENCES Course(courseID)  );
+-- CREATE TABLE Assignment
+--    (AssignmentID VARCHAR(20),
+--     courseID VARCHAR(20),
+--     Marks FLOAT,
+--     PRIMARY KEY (AssignmentID),
+--     FOREIGN KEY (courseID) REFERENCES Course(courseID)  );
 
 
 -- Create Lecturer Table
 
 CREATE TABLE
     Lecturer(
-        LecturerId VARCHAR (10),
-        NIC INT (15),
-        DepID VARCHAR (10),
+        LecturerId VARCHAR (20),
+        NIC INT ,
+        DepID VARCHAR (20),
         PRIMARY KEY(LecturerID),
         FOREIGN KEY (NIC) REFERENCES User(NIC),
         FOREIGN KEY (DepID) REFERENCES Department(DepID)
@@ -54,9 +54,9 @@ CREATE TABLE
         EndPractical decimal(3,2),
         EndTheory decimal(3,2),
         Assesments decimal(3,2),
-        stuID VARCHAR(10),
-        courseID VARCHAR(10),
-        DepID VARCHAR(10),
+        stuID VARCHAR(20),
+        courseID VARCHAR(20),
+        DepID VARCHAR(20),
         FOREIGN KEY (stuID) REFERENCES Student(stuID),
         FOREIGN KEY (courseID) REFERENCES Course(courseID),
         FOREIGN KEY (DepID) REFERENCES Department(DepID)
@@ -66,7 +66,7 @@ CREATE TABLE
   -- admin table creation
 
      CREATE TABLE admin(
-         adminID VARCHAR(5),
+         adminID VARCHAR(20),
          NIC INT,
          PRIMARY KEY(adminID),
          FOREIGN KEY (NIC) REFERENCES User(NIC)
@@ -144,7 +144,7 @@ INSERT INTO User Values
 INSERT INTO Department VALUES 
 ("DpICT" , "ICT Department"),
 ("DpET" , "ET Department"),
-("DpMUL" , "Multideciplinary Dep");
+("DpMUL" , "Multideciplinary Department");
 
 
 -- lecturer table data insertion
@@ -157,6 +157,50 @@ INSERT INTO Lecturer VALUES
 ("Lec005", 5731 , "DpICT"),
 ("Lec006", 6298 , "DpMUL"),
 ("Lec007", 1746 , "DpMUL");
+
+
+
+-- examMarks table data insertion
+
+INSERT INTO ExamMarks VALUES
+( 80 , 70 , 60 , 70 , 60 , 80 , 70 , 80 , "TG/2021/1011" , "TCS1212" , "DpMUL"),
+( 70 , 60 , 50 , 60 , 50 , 70 , 60 , 70 , "TG/2021/1020" , "TCS1212" , "DpMUL"),
+( 60 , 50 , 40 , 50 , 40 , 60 , 50 , 60 , "TG/2021/1014" , "TCS1212" , "DpMUL"),
+( 50 , 40 , 30 , 40 , 30 , 50 , 40 , 50 , "TG/2021/1024" , "TCS1212" , "DpMUL"),
+( 40 , 30 , 20 , 30 , 20 , 40 , 30 , 40 , "TG/2021/1027" , "TCS1212" , "DpMUL"),
+( 30 , 20 , 10 , 20 , 10 , 30 , 20 , 30 , "TG/2021/1031" , "TCS1212" , "DpMUL"),
+( 20 , 10 , 00 , 10 , 00 , 20 , 10 , 20 , "TG/2021/1036" , "TCS1212" , "DpMUL"),
+( 80 , 70 , 60 , 70 , 60 , 80 , 70 , 80 , "TG/2021/1042" , "TCS1212" , "DpMUL"),
+( 70 , 60 , 50 , 60 , 50 , 70 , 60 , 70 , "TG/2021/1045" , "TCS1212" , "DpMUL"),
+( 60 , 50 , 40 , 50 , 40 , 60 , 50 , 60 , "TG/2021/1050" , "TCS1212" , "DpMUL"),
+( 50 , 40 , 30 , 40 , 30 , 50 , 40 , 50 , "TG/2020/980" , "TCS1212" , "DpMUL"),
+( 40 , 30 , 20 , 30 , 20 , 40 , 30 , 40 , "TG/2020/972" , "TCS1212" , "DpMUL"),
+( 30 , 20 , 10 , 20 , 10 , 30 , 20 , 30 , "TG/2020/945" , "TCS1212" , "DpMUL"),
+( 20 , 10 , 00 , 10 , 00 , 20 , 10 , 20 , "TG/2019/866" , "TCS1212" , "DpMUL"),
+( 80 , 70 , 60 , 70 , 60 , 80 , 70 , 80 , "TG/2019/854" , "TCS1212" , "DpMUL"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/678" , "TCS1212" , "DpMUL"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/645" , "TCS1212" , "DpMUL"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2017/415" , "TCS1212" , "DpMUL"),
+
+( 40 , 30 , 20 , 30 , 20 , 40 , 30 , 40 , "TG/2021/1011" , "TMS1233" , "DpET"),
+( 30 , 20 , 10 , 20 , 10 , 30 , 20 , 30 , "TG/2021/1020" , "TMS1233" , "DpET"),
+( 20 , 10 , 00 , 10 , 00 , 20 , 10 , 20 , "TG/2021/1014" , "TMS1233" , "DpET"),
+( 80 , 70 , 60 , 70 , 60 , 80 , 70 , 80 , "TG/2021/1024" , "TMS1233" , "DpET"),
+( 70 , 60 , 50 , 60 , 50 , 70 , 60 , 70 , "TG/2021/1027" , "TMS1233" , "DpET"),
+( 60 , 50 , 40 , 50 , 40 , 60 , 50 , 60 , "TG/2021/1031" , "TMS1233" , "DpET"),
+( 50 , 40 , 30 , 40 , 30 , 50 , 40 , 50 , "TG/2021/1036" , "TMS1233" , "DpET"),
+( 40 , 30 , 20 , 30 , 20 , 40 , 30 , 40 , "TG/2021/1042" , "TMS1233" , "DpET"),
+( 30 , 20 , 10 , 20 , 10 , 30 , 20 , 30 , "TG/2021/1045" , "TMS1233" , "DpET"),
+( 20 , 10 , 00 , 10 , 00 , 20 , 10 , 20 , "TG/2021/1050" , "TMS1233" , "DpET"),
+( 80 , 70 , 60 , 70 , 60 , 80 , 70 , 80 , "TG/2020/980" , "TMS1233" , "DpET"),
+( 70 , 60 , 50 , 60 , 50 , 70 , 60 , 70 , "TG/2020/972" , "TMS1233" , "DpET"),
+( 60 , 50 , 40 , 50 , 40 , 60 , 50 , 60 , "TG/2020/945" , "TMS1233" , "DpET"),
+( 50 , 40 , 30 , 40 , 30 , 50 , 40 , 50 , "TG/2019/866" , "TMS1233" , "DpET"),
+( 40 , 30 , 20 , 30 , 20 , 40 , 30 , 40 , "TG/2019/854" , "TMS1233" , "DpET"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/678" , "TMS1233" , "DpET"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/645" , "TMS1233" , "DpET"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2017/415" , "TMS1233" , "DpET"),
+
 
 
 

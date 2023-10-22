@@ -35,7 +35,7 @@ CREATE TABLE notice(
     PRIMARY KEY(noticeID));
 
 
-
+-- //student deatils
 
 (876543210987 ,"kasun123@gmail.com","kusan" , "kalhara" ,"2001-01-01",Student,M),
 

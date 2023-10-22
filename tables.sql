@@ -75,8 +75,8 @@ CREATE TABLE notice(
 INSERT INTO course(courseID,CName,Credit,Week,Theory,Practical,DepID,LecturerId)
 VALUES(
     ("ENG1222","English II",02,15,1,0,,"DpMUL","Lec006"),
-    ("ICT1212" ,"Database Management Systems Theory",02,15,1,0,,"DpICT","Lec001"),
-    ("ICT1222","Database Management Systems Practicum",02,15,0,,1,,"DpICT","Lec001"),
+    ("ICT1212" ,"Database Management Systems Theory",02,15,1,0,"DpICT","Lec001"),
+    ("ICT1222","Database Management Systems Practicum",02,15,0,1,"DpICT","Lec001"),
     ("ICT1233","Server-Side Web Development",03,15,1,1,"DpICT","Lec005"),
     ("ICT1242","Computer Architecture",02,15,1,0,"DpICT","Lec003"),
     ("ICT1253","Computer Networks",03,15,1,1,"DpICT","Lec002"),
@@ -96,3 +96,102 @@ VALUES(
          FOREIGN KEY (NIC) REFERENCES User(NIC)
          );
 
+  CREATE TABLE ExamMarks( 
+        Quiz1 decimal(3,2),
+        Quiz2 decimal(3,2),
+        Quiz3 decimal(3,2),
+        MidPractical decimal(3,2),
+        MidTheory decimal(3,2),
+        EndPractical decimal(3,2),
+        EndTheory decimal(3,2),
+        Assesments decimal(3,2),
+        stuID VARCHAR(10),
+        courseID VARCHAR(10),
+        DepID VARCHAR(10),
+        FOREIGN KEY (stuID) REFERENCES Student(stuID),
+        FOREIGN KEY (courseID) REFERENCES Course(courseID),
+        FOREIGN KEY (DepID) REFERENCES Department(DepID)
+         ); 
+
+-- dbms pratical and Server-Side Web Development
+
+INSERT INTO ExamMarks
+VALUES(
+    (80,70,80,78,89,90,87,"TG/2021/1011","ICT1222","DpICT"),
+
+    (90,90,90,76,78,56,85,"TG/2021/1020","ICT1222","DpICT"),
+
+    (50,60,70,65,50,76,67,"TG/2021/1014","ICT1222","DpICT"),
+
+    (30,10,60,50,40,34,79,"TG/2021/1024","ICT1222","DpICT"),
+
+    (00,10,10,35,45,56,60,"TG/2021/1027","ICT1222","DpICT"),
+
+    (100,100,100,78,89,90,87,"TG/2021/1031","ICT1222","DpICT"),
+
+    (80,70,80,78,89,90,87,"TG/2021/1036","ICT1222","DpICT"),
+
+    (75,35,55,44,20,10,07,"TG/2021/1042","ICT1222","DpICT"),
+
+    (65,75,85,67,69,90,87,"TG/2021/1045","ICT1222","DpICT"),
+
+    (95,55,60,91,71,79,85,"TG/2021/1050","ICT1222","DpICT"),
+
+    (85,35,75,10,78,80,80,"TG/2020/980","ICT1222","DpICT"),
+
+    (100,100,100,100,100,100,100,"TG/2020/972","ICT1222","DpICT"),
+
+    (90,90,90,90,90,99,99,"TG/2020/945","ICT1222","DpICT"),
+
+    (65,55,50,65,60,65,45,"TG/2019/866","ICT1222","DpICT"),
+
+    (55,45,65,72,83,66,77.5,"TG/2019/854","ICT1222","DpICT"),
+
+    (0,0,0,0,0,0,0,"TG/2018/678","ICT1222","DpICT"),
+
+    (0,0,0,0,0,0,0,"TG/2018/645","ICT1222","DpICT"),
+
+    (0,0,0,0,0,0,0,"TG/2017/415","ICT1222","DpICT"), 
+    
+);
+
+-- SERVER SIDE
+ INSERT INTO ExamMarks
+VALUES(
+    (80,70,80,78,89,90,87,"TG/2021/1011","ICT1222","DpICT"),
+
+    (90,90,90,76,78,56,85,"TG/2021/1020","ICT1222","DpICT"),
+
+    (50,60,70,65,50,76,67,"TG/2021/1014","ICT1222","DpICT"),
+
+    (30,10,60,50,40,34,79,"TG/2021/1024","ICT1222","DpICT"),
+
+    (00,10,10,35,45,56,60,"TG/2021/1027","ICT1222","DpICT"),
+
+    (100,100,100,78,89,90,87,"TG/2021/1031","ICT1222","DpICT"),
+
+    (80,70,80,78,89,90,87,"TG/2021/1036","ICT1222","DpICT"),
+
+    (75,35,55,44,20,10,07,"TG/2021/1042","ICT1222","DpICT"),
+
+    (65,75,85,67,69,90,87,"TG/2021/1045","ICT1222","DpICT"),
+
+    (95,55,60,91,71,79,85,"TG/2021/1050","ICT1222","DpICT"),
+
+    (85,35,75,10,78,80,80,"TG/2020/980","ICT1222","DpICT"),
+
+    (100,100,100,100,100,100,100,"TG/2020/972","ICT1222","DpICT"),
+
+    (90,90,90,90,90,99,99,"TG/2020/945","ICT1222","DpICT"),
+
+    (65,55,50,65,60,65,45,"TG/2019/866","ICT1222","DpICT"),
+
+    (55,45,65,72,83,66,77.5,"TG/2019/854","ICT1222","DpICT"),
+
+    (0,0,0,0,0,0,0,"TG/2018/678","ICT1222","DpICT"),
+
+    (0,0,0,0,0,0,0,"TG/2018/645","ICT1222","DpICT"),
+
+    (0,0,0,0,0,0,0,"TG/2017/415","ICT1222","DpICT"), 
+    
+);

@@ -146,7 +146,7 @@ INSERT INTO Department VALUES
 ("DepET" , "ET Department"),
 ("DepMUL" , "Multideciplinary Dep");
 
-(
+
 
 
 

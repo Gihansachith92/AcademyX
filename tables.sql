@@ -72,8 +72,8 @@ CREATE TABLE notice(
 (456789098765 ,"hiruni888@gmail.com ", "hiruni" , "herath" ,"2001-05-13","Student","F")
 
 -- course details
-INSERT INTO course(courseID,CName,Credit,Week,Theory,Practical,DepID,LecturerId)
-VALUES(
+INSERT INTO course
+VALUES
     ("ENG1222","English II",02,15,1,0,,"DpMUL","Lec006"),
     ("ICT1212" ,"Database Management Systems Theory",02,15,1,0,"DpICT","Lec001"),
     ("ICT1222","Database Management Systems Practicum",02,15,0,1,"DpICT","Lec001"),
@@ -81,8 +81,7 @@ VALUES(
     ("ICT1242","Computer Architecture",02,15,1,0,"DpICT","Lec003"),
     ("ICT1253","Computer Networks",03,15,1,0,"DpICT","Lec002"),
     ("TCS1212",'Fundamentals of Management',02,15,1,0,"DpMUL","Lec007"),
-    ("TMS1233","Discrete Mathematics",03,15,1,0,"DpET","lec004"),
-);
+    ("TMS1233","Discrete Mathematics",03,15,1,0,"DpET","lec004");
 
 INSERT INTO admin
 VALUES ("Admin",3487);

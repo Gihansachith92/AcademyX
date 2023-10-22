@@ -147,6 +147,18 @@ INSERT INTO Department VALUES
 ("DpMUL" , "Multideciplinary Dep");
 
 
+-- lecturer table data insertion
+
+INSERT INTO Lecturer VALUES
+("Lec001", 8230 , "DpICT"),
+("Lec002", 4675 , "DpICT"),
+("Lec003", 9804 , "DpICT"),
+("lec004", 2856 , "DpET"),
+("Lec005", 5731 , "DpICT"),
+("Lec006", 6298 , "DpMUL"),
+("Lec007", 1746 , "DpMUL");
+
+
 
 
 

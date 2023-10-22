@@ -142,9 +142,9 @@ INSERT INTO User Values
 -- department table data insertion
 
 INSERT INTO Department VALUES 
-("DepICT" , "ICT Department"),
-("DepET" , "ET Department"),
-("DepMUL" , "Multideciplinary Dep");
+("DpICT" , "ICT Department"),
+("DpET" , "ET Department"),
+("DpMUL" , "Multideciplinary Dep");
 
 
 

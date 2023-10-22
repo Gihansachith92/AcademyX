@@ -8,7 +8,6 @@
     Practical INT,
     DepID VARCHAR(20),
     LecturerId VARCHAR(20),
-    FOREIGN KEY(stuID) REFERENCES student(stuID),
     FOREIGN KEY(DepID) REFERENCES Department(DepID),
     FOREIGN KEY(LecturerId) REFERENCES lecturer(LecturerId),
     PRIMARY KEY(courseID));
@@ -25,7 +24,7 @@ CREATE TABLE eligibility(
 CREATE TABLE notice(
     noticeID VARCHAR(20),
     title VARCHAR(20),
-    Description VARCHAR(25),
+    Description VARCHAR(100),
     Date date,
     stuID varchar(20),
     LecturerId VARCHAR (20),
@@ -73,16 +72,16 @@ CREATE TABLE notice(
 (456789098765 ,"hiruni888@gmail.com ", "hiruni" , "herath" ,"2001-05-13","Student","F")
 
 -- course details
-INSERT INTO course(courseID,Name,Credit,Week,Theory,Practical,DepID,LecturerId)
+INSERT INTO course(courseID,CName,Credit,Week,Theory,Practical,DepID,LecturerId)
 VALUES(
     ("ENG12lec00422","English II",02,15,1,0,,"DpMUL","Lec006"),
-    ("ICT1212" ,"Database MST",02,15,1,0,,"DpICT","Lec001"),
-    ("ICT1222","Database MSP",02,15,0,,1,,"DpICT","Lec001"),
-    ("ICT1233","Server-Side WD",03,15,1,1,"DpICT","Lec005"),
-    ("ICT1242","Computer Archi",02,15,1,0,"DpICT","Lec003"),
+    ("ICT1212" ,"Database Management Systems",02,15,1,0,,"DpICT","Lec001"),
+    ("ICT1222","Database Management Systems Practicum",02,15,0,,1,,"DpICT","Lec001"),
+    ("ICT1233","Server-Side Web Development",03,15,1,1,"DpICT","Lec005"),
+    ("ICT1242","Computer Architecture",02,15,1,0,"DpICT","Lec003"),
     ("ICT1253","Computer Networks",03,15,1,1,"DpICT","Lec002"),
-    ("TCS1212",'Fund of Management',02,15,1,0,"DpMUL","Lec007"),
-    ("TMS1233","Discrete Mathz",03,15,1,0,"DpET","lec004"),
+    ("TCS1212",'Fundamentals of Management',02,15,1,0,"DpMUL","Lec007"),
+    ("TMS1233","Discrete Mathematics",03,15,1,0,"DpET","lec004"),
 );
 
 INSERT INTO admin

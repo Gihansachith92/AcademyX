@@ -6,7 +6,6 @@
     Week INT ,
     Theory INT,
     Practical INT,
-    stuID VARCHAR(10),
     DepID VARCHAR(5),
     LecturerId VARCHAR(10),
     FOREIGN KEY(stuID) REFERENCES student(stuID),
@@ -37,7 +36,7 @@ CREATE TABLE notice(
 
 -- //student deatils
 
-(876543210987 ,"kasun123@gmail.com","kusan" , "kalhara" ,"2001-01-01",Student,M),
+(876543210987 ,"kasun123@gmail.com","kusan" , "kalhara" ,"2001-01-01","Student","M"),
 
 (345612789043 ,"pramitha123@gmail.com ","pramitha" , "jayaweera" ,"2002-02-01","Student","M"),
 
@@ -49,7 +48,7 @@ CREATE TABLE notice(
 
 (543216789012 ,"niluka2001@gmail.com" ,"niluka de" ,"silva" ,"2002-09-30","Student","F"),
 
-(765432123498 ,"sadun432@gmail.com ",sadun , "perera" ,"2000-07-01","Student","M"),
+(765432123498 ,"sadun432@gmail.com ","sadun" , "perera" ,"2000-07-01","Student","M"),
 
 (234567890123 ,"ayodya9001@gmail.com ","ayodya", "fernando" ,"1998-06-21","Student","F"),
 
@@ -74,16 +73,16 @@ CREATE TABLE notice(
 (456789098765 ,"hiruni888@gmail.com ", "hiruni" , "herath" ,"2001-05-13","Student","F")
 
 -- course details
-INSERT INTO course(courseID,Name,Credit,Week,Theory,Practical,stuID,DepID,LecturerId)
+INSERT INTO course(courseID,Name,Credit,Week,Theory,Practical,DepID,LecturerId)
 VALUES(
-    ("ENG12lec00422","English II",02,15,1,0,"","","Lec006"),
-    ("ICT1212" ,"Database MST",02,15,1,0,"","","Lec001"),
-    ("ICT1222","Database MSP",02,15,0,,1,"","","Lec001"),
-    ("ICT1233","Server-Side WD",03,15,1,1,"","","Lec005"),
-    ("ICT1242","Computer Archi",02,15,1,0,"","","Lec003"),
-    ("ICT1253","Computer Networks",03,15,1,1,"","","Lec002"),
-    ("TCS1212",'Fund of Management',02,15,1,0,"","","Lec007"),
-    ("TMS1233","Discrete Mathz",03,15,1,0,"","","lec004"),
+    ("ENG12lec00422","English II",02,15,1,0,,"DpMUL","Lec006"),
+    ("ICT1212" ,"Database MST",02,15,1,0,,"DpICT","Lec001"),
+    ("ICT1222","Database MSP",02,15,0,,1,,"DpICT","Lec001"),
+    ("ICT1233","Server-Side WD",03,15,1,1,"DpICT","Lec005"),
+    ("ICT1242","Computer Archi",02,15,1,0,"DpICT","Lec003"),
+    ("ICT1253","Computer Networks",03,15,1,1,"DpICT","Lec002"),
+    ("TCS1212",'Fund of Management',02,15,1,0,"DpMUL","Lec007"),
+    ("TMS1233","Discrete Mathz",03,15,1,0,"DpET","lec004"),
 );
 
 INSERT INTO admin

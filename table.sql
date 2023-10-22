@@ -11,7 +11,7 @@
 
 -- Create ExamMarks Table
 
--- CREATE TABLE ExamMarks( 
+-- CREATE TABLE ExamMarks(
 --         Quiz1 decimal(3,2),
 --         Quiz2 decimal(3,2),
 --         Quiz3 decimal(3,2),
@@ -28,7 +28,6 @@
 --         FOREIGN KEY (DepID) REFERENCES Department(DepID)
 --          );
 
-
 -- Craete Medical TABLE
 
 CREATE TABLE
@@ -38,19 +37,19 @@ CREATE TABLE
         Description VARCHAR(100),
         stuID VARCHAR(20),
         PRIMARY KEY(MeidcalID)
-    
     );
-
 
 -- Create coursemedical
+
 CREATE TABLE
     coursemedical(
-    MeidcalID VARCHAR(20),
-    courseID VARCHAR(20),
-    FOREIGN KEY(MeidcalID) REFERENCES Medical(MeidcalID),
-    FOREIGN KEY(courseID) REFERENCES Course(courseID)
-    
+        MeidcalID VARCHAR(20),
+        courseID VARCHAR(20),
+        FOREIGN KEY(MeidcalID) REFERENCES Medical(MeidcalID),
+        FOREIGN KEY(courseID) REFERENCES Course(courseID)
     );
+
+
 -- Create attendance table
 
 CREATE TABLE
@@ -58,6 +57,8 @@ CREATE TABLE
         stuID VARCHAR(20),
         courseID VARCHAR(20),
         Date DATE,
-    FOREIGN KEY(stuID) REFERENCES Student(stuID),
-    FOREIGN KEY(courseID) REFERENCES Student(courseID),
+        FOREIGN KEY(stuID) REFERENCES Student(stuID),
+        FOREIGN KEY(courseID) REFERENCES Student(courseID),
     );
+
+    

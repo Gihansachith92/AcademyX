@@ -73,3 +73,27 @@ CREATE TABLE notice(
 
 (456789098765 ,"hiruni888@gmail.com ", "hiruni" , "herath" ,"2001-05-13","Student","F")
 
+-- course details
+INSERT INTO course(courseID,Name,Credit,Week,Theory,Practical,stuID,DepID,LecturerId)
+VALUES(
+    ("ENG12lec00422","English II",02,15,1,0,"","","Lec006"),
+    ("ICT1212" ,"Database MST",02,15,1,0,"","","Lec001"),
+    ("ICT1222","Database MSP",02,15,0,,1,"","","Lec001"),
+    ("ICT1233","Server-Side WD",03,15,1,1,"","","Lec005"),
+    ("ICT1242","Computer Archi",02,15,1,0,"","","Lec003"),
+    ("ICT1253","Computer Networks",03,15,1,1,"","","Lec002"),
+    ("TCS1212",'Fund of Management',02,15,1,0,"","","Lec007"),
+    ("TMS1233","Discrete Mathz",03,15,1,0,"","","lec004"),
+);
+
+INSERT INTO admin
+VALUES(
+    ("Admin",3487);
+);
+
+ CREATE TABLE admin(
+         adminID VARCHAR(5),
+         NIC INT,
+         PRIMARY KEY(adminID),
+         FOREIGN KEY (NIC) REFERENCES User(NIC)
+         );

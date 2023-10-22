@@ -74,8 +74,8 @@ CREATE TABLE notice(
 -- course details
 INSERT INTO course(courseID,CName,Credit,Week,Theory,Practical,DepID,LecturerId)
 VALUES(
-    ("ENG12lec00422","English II",02,15,1,0,,"DpMUL","Lec006"),
-    ("ICT1212" ,"Database Management Systems",02,15,1,0,,"DpICT","Lec001"),
+    ("ENG1222","English II",02,15,1,0,,"DpMUL","Lec006"),
+    ("ICT1212" ,"Database Management Systems Theory",02,15,1,0,,"DpICT","Lec001"),
     ("ICT1222","Database Management Systems Practicum",02,15,0,,1,,"DpICT","Lec001"),
     ("ICT1233","Server-Side Web Development",03,15,1,1,"DpICT","Lec005"),
     ("ICT1242","Computer Architecture",02,15,1,0,"DpICT","Lec003"),
@@ -95,3 +95,4 @@ VALUES(
          PRIMARY KEY(adminID),
          FOREIGN KEY (NIC) REFERENCES User(NIC)
          );
+

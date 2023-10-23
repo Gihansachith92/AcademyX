@@ -100,3 +100,22 @@ INSERT INTO ExamMarks() VALUES
 ( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/678" , "ICT1242" , "DpICT"),
 ( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/645" , "ICT1242" , "DpICT"),
 ( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2017/415" , "ICT1242" , "DpICT");
+
+
+CREATE TABLE notice(
+    noticeID VARCHAR(20),
+    title VARCHAR(20),
+    Description VARCHAR(100),
+    Date date,
+    LecturerId VARCHAR (20),
+    FOREIGN key(LecturerId) REFERENCES lecturer(LecturerId),
+    FOREIGN key(stuID) REFERENCES student(stuID),
+    PRIMARY KEY(noticeID));
+
+
+INSERT INTO notice VALUES
+    ('N001', 'Important Notice', 'This is an important notice for all students.', '2023-10-23','lec001'),
+    ('N002', 'Meeting Reminder', 'Reminder of the upcoming meeting.', '2023-10-25','lec006'),
+    ('N003', 'Assignment Deadline', 'The deadline for the assignment is approaching.', '2023-10-28', 'lec004'),
+    ('N004', 'Guest Lecture', 'Guest lecturer presentation on the 30th.', '2023-10-30','lec007');
+

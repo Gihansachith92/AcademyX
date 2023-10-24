@@ -35,9 +35,18 @@ CREATE TABLE
         MeidcalID VARCHAR(20),
         Submitdate DATE,
         Description VARCHAR(100),
-        stuID VARCHAR(20),
         PRIMARY KEY(MeidcalID)
     );
+
+
+
+    INSERT INTO Medical (MeidcalID, Submitdate, Description)
+VALUES
+    ('MED001', '2023-07-26', 'Medical certificate for flu'),
+    ('MED002', '2023-06-22', 'Sick leave request'),
+    ('MED003', '2023-06-20', 'Doctor s note for a medical appointment'),
+    ('MED004', '2023-07-24', 'Medical leave due to injury'),
+    ('MED005', '2023-06-28', 'Prescription request');
 
 -- Create coursemedical
 
@@ -45,10 +54,11 @@ CREATE TABLE
     coursemedical(
         MeidcalID VARCHAR(20),
         courseID VARCHAR(20),
+        stuID VARCHAR(20),
         FOREIGN KEY(MeidcalID) REFERENCES Medical(MeidcalID),
-        FOREIGN KEY(courseID) REFERENCES Course(courseID)
+        FOREIGN KEY(courseID) REFERENCES Course(courseID),
+        FOREIGN KEY(stuID) REFERENCES Student(stuID);
     );
-
 
 -- Create attendance table
 
@@ -129,7 +139,6 @@ VALUES
 ('TG/2021/1011', 'ICT1253', '2023-05-29'),
 ('TG/2021/1011', 'ICT1253', '2023-06-06'),
 ('TG/2021/1011', 'ICT1253', '2023-06-13'),
-('TG/2021/1011', 'ICT1253', '2023-06-20'),
 ('TG/2021/1011', 'ICT1253', '2023-06-27'),
 ('TG/2021/1011', 'ICT1253', '2023-07-03'),
 ('TG/2021/1011', 'ICT1253', '2023-07-10'),
@@ -166,7 +175,7 @@ VALUES
 ('TG/2021/1014', 'ICT1253', '2023-07-03'),
 ('TG/2021/1014', 'ICT1253', '2023-07-10'),
 ('TG/2021/1014', 'ICT1253', '2023-07-17'),
-('TG/2021/1014', 'ICT1253', '2023-07-24'),
+
 ('TG/2021/1014', 'ICT1253', '2023-08-01'),
 ('TG/2021/1014', 'ICT1253', '2023-12-08'),
 
@@ -247,7 +256,7 @@ VALUES
 ('TG/2021/1024', 'ICT1242', '2023-06-07'),
 ('TG/2021/1024', 'ICT1242', '2023-06-14'),
 ('TG/2021/1024', 'ICT1242', '2023-06-21'),
-('TG/2021/1024', 'ICT1242', '2023-06-28'),
+
 ('TG/2021/1024', 'ICT1242', '2023-07-04'),
 ('TG/2021/1024', 'ICT1242', '2023-07-11'),
 ('TG/2021/1024', 'ICT1242', '2023-07-18'),
@@ -320,6 +329,5 @@ VALUES
 ('TG/2021/1024', 'ICT1212', '2023-07-05'),
 ('TG/2021/1024', 'ICT1212', '2023-07-12'),
 ('TG/2021/1024', 'ICT1212', '2023-07-19'),
-('TG/2021/1024', 'ICT1212', '2023-07-26'),
 ('TG/2021/1024', 'ICT1212', '2023-08-03'),
 ('TG/2021/1024', 'ICT1212', '2023-12-10');

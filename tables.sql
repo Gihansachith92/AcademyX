@@ -370,6 +370,8 @@ INSERT INTO ExamMarks VALUES
         stuID VARCHAR(20),
         courseID VARCHAR(20),
         percentage(%) INT,
+        DepID VARCHAR(20),
+        FOREIGN KEY (DepID) REFERENCES Department(DepID)
         FOREIGN KEY(stuID) REFERENCES Student(stuID),
         FOREIGN KEY(courseID) REFERENCES Student(courseID),
     );

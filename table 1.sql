@@ -9,7 +9,7 @@
         percentage INT,
         FOREIGN KEY (DepID) REFERENCES Department(DepID),
         FOREIGN KEY(stuID) REFERENCES Student(stuID),
-        FOREIGN KEY(courseID) REFERENCES Student(courseID)
+        FOREIGN KEY(courseID) REFERENCES course(courseID)
     );
 
 

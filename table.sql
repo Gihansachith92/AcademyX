@@ -59,6 +59,12 @@ CREATE TABLE
         FOREIGN KEY(courseID) REFERENCES Course(courseID),
         FOREIGN KEY(stuID) REFERENCES Student(stuID);
     );
+INSERT INTO coursemedical VALUES
+    ('MED001','ICT1212','TG/2021/1024'),
+    ('MED002','ICT1212','TG/2021/1014'),
+    ('MED003','ICT1253','TG/2021/1011'),
+    ('MED004','ICT1253','TG/2021/1014'),
+    ('MED005','ICT1242','TG/2021/1024');
 
 -- Create attendance table
 

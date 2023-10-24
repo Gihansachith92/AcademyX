@@ -363,6 +363,20 @@ INSERT INTO ExamMarks VALUES
 
 
 
+      -- attendance table structure
+
+      CREATE TABLE
+    Attendance(
+        stuID VARCHAR(20),
+        courseID VARCHAR(20),
+        percentage(%) INT,
+        FOREIGN KEY(stuID) REFERENCES Student(stuID),
+        FOREIGN KEY(courseID) REFERENCES Student(courseID),
+    );
+
+
+
+
 
 
 

@@ -369,11 +369,11 @@ INSERT INTO ExamMarks VALUES
     Attendance(
         stuID VARCHAR(20),
         courseID VARCHAR(20),
-        percentage(%) INT,
         DepID VARCHAR(20),
-        FOREIGN KEY (DepID) REFERENCES Department(DepID)
+        percentage(%) INT,
+        FOREIGN KEY (DepID) REFERENCES Department(DepID),
         FOREIGN KEY(stuID) REFERENCES Student(stuID),
-        FOREIGN KEY(courseID) REFERENCES Student(courseID),
+        FOREIGN KEY(courseID) REFERENCES Student(courseID)
     );
 
 

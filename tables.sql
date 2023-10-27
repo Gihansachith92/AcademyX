@@ -21,14 +21,7 @@ CREATE TABLE Student
     FOREIGN KEY (NIC) REFERENCES User(NIC)  );
 
 
--- Assignment table creation
 
--- CREATE TABLE Assignment
---    (AssignmentID VARCHAR(20),
---     courseID VARCHAR(20),
---     Marks FLOAT,
---     PRIMARY KEY (AssignmentID),
---     FOREIGN KEY (courseID) REFERENCES Course(courseID)  );
 
 
 -- Create Lecturer Table

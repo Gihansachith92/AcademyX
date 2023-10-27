@@ -179,9 +179,9 @@ INSERT INTO ExamMarks VALUES
 ( 30 , 60 , 90 , 0 , 10 , 0 , 20 , 70 , "TG/2020/945" , "TCS1212" , "DpMUL"),
 ( 60 , 80 , 00 , 0 , 00 , 0 , 10 , 90 , "TG/2019/866" , "TCS1212" , "DpMUL"),
 ( 80 , 70 , 60 , 0 , 60 , 0 , 70 , 80 , "TG/2019/854" , "TCS1212" , "DpMUL"),
-( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2018/678" , "TCS1212" , "DpMUL"),
-( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2018/645" , "TCS1212" , "DpMUL"),
-( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2017/415" , "TCS1212" , "DpMUL"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/678" , "TCS1212" , "DpMUL"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/645" , "TCS1212" , "DpMUL"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2017/415" , "TCS1212" , "DpMUL"),
 
 ( 40 , 70 , 80 , 0 , 70 , 0 , 80 , 90 , "TG/2021/1011" , "TMS1233" , "DpET"),
 ( 70 , 20 , 80 , 0 , 80 , 0 , 80 , 70 , "TG/2021/1020" , "TMS1233" , "DpET"),
@@ -198,9 +198,9 @@ INSERT INTO ExamMarks VALUES
 ( 60 , 50 , 40 , 0 , 80 , 0 , 50 , 60 , "TG/2020/945" , "TMS1233" , "DpET"),
 ( 50 , 40 , 70 , 0 , 90 , 0 , 80 , 50 , "TG/2019/866" , "TMS1233" , "DpET"),
 ( 40 , 30 , 20 , 0 , 20 , 0 , 30 , 40 , "TG/2019/854" , "TMS1233" , "DpET"),
-( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2018/678" , "TMS1233" , "DpET"),
-( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2018/645" , "TMS1233" , "DpET"),
-( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2017/415" , "TMS1233" , "DpET"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/678" , "TMS1233" , "DpET"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/645" , "TMS1233" , "DpET"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2017/415" , "TMS1233" , "DpET"),
 
 
 ( 80 , 70 , 60 , 0 , 60 , 0 , 70 , 80 , "TG/2021/1011" , "ICT1253" , "DpICT"),
@@ -218,9 +218,9 @@ INSERT INTO ExamMarks VALUES
 ( 10 , 80 , 25 , 0 , 78 , 0 , 34 , 24 , "TG/2020/945" , "ICT1253" , "DpICT"),
 ( 30 , 90 , 15 , 0 , 80 , 0 , 85 , 23 , "TG/2019/866" , "ICT1253" , "DpICT"),
 ( 60 , 70 , 20 , 0 , 45 , 0 , 12 , 12 , "TG/2019/854" , "ICT1253" , "DpICT"),
-( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2018/678" , "ICT1253" , "DpICT"),
-( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2018/645" , "ICT1253" , "DpICT"),
-( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2017/415" , "ICT1253" , "DpICT"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/678" , "ICT1253" , "DpICT"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/645" , "ICT1253" , "DpICT"),
+( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2017/415" , "ICT1253" , "DpICT"),
 
 ( 45 , 70 , 60 , 0 , 63 , 0 , 5 , 20 , "TG/2021/1011" , "ICT1242" , "DpICT"),
 ( 30 , 40 , 65 , 0 , 20 , 0 , 4 , 75 , "TG/2021/1020" , "ICT1242" , "DpICT"),
@@ -358,7 +358,7 @@ INSERT INTO ExamMarks VALUES
       ( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2018/678"  , "ICT1212","DpICT"),
       ( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2018/645"  , "ICT1212","DpICT"),
       ( NULL , NULL , NULL , NULL , NULL , NULL , NULL , NULL , "TG/2017/415"  , "ICT1212","DpICT");
-
+0
 
 
 

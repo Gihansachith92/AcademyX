@@ -28,3 +28,13 @@ FROM exammarks e
 INNER JOIN student s ON e.stuid = s.stuid
 WHERE s.states != 'suspended';
 
+
+-- Create the StudentMidterm_Marks view with 20% weighted MidPractical and MidTheory scores
+
+CREATE VIEW StudentMidterm_Marks AS
+SELECT e.stuid, e.courseid, e.depid, 
+    ((e.MidTheory + e.MidPractical) * 0.20) AS `MidMark`
+FROM exammarks e
+INNER JOIN student s ON e.stuid = s.stuid
+WHERE s.states != 'suspended';
+

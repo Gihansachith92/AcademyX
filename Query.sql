@@ -38,3 +38,15 @@ FROM exammarks e
 INNER JOIN student s ON e.stuid = s.stuid
 WHERE s.states != 'suspended';
 
+
+
+
+-- Create the StudentCA_Marks view 
+CREATE VIEW StudentCA_Marks AS
+SELECT e.stuid, e.courseid, e.depid,
+             ((e.quiz1 + e.quiz2 + e.quiz3 - LEAST(e.quiz1, LEAST(e.quiz2, e.quiz3))) / 2) * 0.05 AS `Quiz_Score` ,
+             (e.Assesments * 0.05) AS `Assessment_Mark` ,
+             ((e.MidTheory + e.MidPractical) * 0.20) AS `MidMark`
+     FROM exammarks e
+     INNER JOIN student s ON e.stuid = s.stuid
+     WHERE s.states != 'suspended';

@@ -84,3 +84,12 @@ FROM exammarks e
 INNER JOIN student s ON e.stuid = s.stuid
 WHERE s.states != 'suspended';
 
+
+
+-- Create the StudentEnd_Marks view with a 70% adjusted assessment mark
+CREATE VIEW StudentEnd_Marks AS
+SELECT e.stuid, e.courseid, e.depid, 
+    ((e.EndPractical  + e.EndTheory ) * 0.70) AS `EndMark`
+FROM exammarks e
+INNER JOIN student s ON e.stuid = s.stuid
+WHERE s.states != 'suspended';

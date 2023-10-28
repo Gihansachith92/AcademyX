@@ -98,13 +98,27 @@ WHERE s.states != 'suspended';
 
 
 -- Create the StudentFinal_Marks view
+-- create view StudentFinal_Marks AS
+-- select c.stuid, c.courseid, c.depid, (c.CA_Marks + e.EndMark) as FinalMark
+-- from studentca_marks c, StudentEnd_Marks e 
+-- where c.Eligibility_Status = 'Eligible' and 
+-- c.stuid = e.stuid and
+-- c.courseid = e.courseid and
+-- c.depid = e.depid;
+
+-- Create the StudentFinal_Marks view
 create view StudentFinal_Marks AS
 select c.stuid, c.courseid, c.depid, (c.CA_Marks + e.EndMark) as FinalMark
-from studentca_marks c, StudentEnd_Marks e 
-where c.Eligibility_Status = 'Eligible' and 
+from studentca_marks c, StudentEnd_Marks e , attendance_eligibility a
+where c.Eligibility_Status = 'Eligible' and a.Eligiblity = 'Eligible' and
 c.stuid = e.stuid and
 c.courseid = e.courseid and
-c.depid = e.depid;
+c.depid = e.depid and
+a.stuid = e.stuid and
+a.stuid = c.stuid and
+a.courseid = e.courseid and
+a.courseid = c.courseid ;
+
 
 
 

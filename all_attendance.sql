@@ -1083,7 +1083,7 @@ INSERT INTO attendance VALUES
     ("TG/2020/945","ICT1242","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2020/945","ICT1242","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2020/945","ICT1242","DpICT",NULL,"Theory","Present",NULL),
-    ("TG/2020/945","ICT1242","DpICT",NULL,"Theory","Present",NULL)
+    ("TG/2020/945","ICT1242","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2020/945","ICT1242","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2020/945","ICT1242","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2020/945","ICT1242","DpICT",NULL,"Theory","Present",NULL),

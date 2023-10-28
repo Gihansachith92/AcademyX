@@ -253,7 +253,7 @@ INSERT INTO attendance VALUES
     ("TG/2021/1020","ICT1233","DpICT","2024-03-18","Theory","Present",NULL),
     ("TG/2021/1020","ICT1233","DpICT","2024-03-25","Theory","Present",NULL),
     ("TG/2021/1020","ICT1233","DpICT","2024-04-01","Theory","Present",NULL),
-    ("TG/2021/1020","ICT1233","DpICT","2024-04-08","Theory","Present",NULL)
+    ("TG/2021/1020","ICT1233","DpICT","2024-04-08","Theory","Present",NULL),
     ("TG/2021/1014","ICT1233","DpICT","2024-01-01","Theory","Absent",NULL),
     ("TG/2021/1014","ICT1233","DpICT","2024-01-08","Theory","Absent",NULL),
     ("TG/2021/1014","ICT1233","DpICT","2024-01-15","Theory","Absent",NULL),

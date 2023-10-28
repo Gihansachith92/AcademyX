@@ -1,0 +1,15 @@
+
+-- Calculate Percentage of attenedance quary test input
+    SELECT (COUNT(Date)/15)*100 AS Percentage 
+    FROM attendance
+    WHERE stuID = "TG/2021/1011" AND courseID = "ICT1253";
+
+-- Attendance Percentage Procedure
+CREATE PROCEDURE Attendance_Percentage(IN StuID VARCHAR(20),IN courseID VARCHAR(20))
+BEGIN
+SELECT stuID,courseID,(COUNT(Date)/15)*100 AS Percentage 
+FROM attendance
+WHERE stuID = @stuID AND courseID = courseID;
+END;//
+
+

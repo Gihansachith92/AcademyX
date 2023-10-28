@@ -190,7 +190,7 @@ INSERT INTO attendance VALUES
 
 
     --for Repeaters
-
+INSERT INTO attendance VALUES 
     ("TG/2019/854","ICT1253","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2019/854","ICT1253","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2019/854","ICT1253","DpICT",NULL,"Theory","Present",NULL),

@@ -190,7 +190,7 @@ INSERT INTO attendance VALUES
     ("TG/2021/1050","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
 
  --Repeaters five student
-
+INSERT INTO attendance VALUES 
     ("TG/2019/854","ENG1222","DpMUL",NULL,"Theory","Present",NULL),
     ("TG/2019/854","ENG1222","DpMUL",NULL,"Theory","Present",NULL),
     ("TG/2019/854","ENG1222","DpMUL",NULL,"Theory","Present",NULL),

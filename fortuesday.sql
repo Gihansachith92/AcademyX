@@ -191,7 +191,7 @@ INSERT INTO attendance VALUES
     ("TG/2021/1050","ICT1212","DpICT","2024-04-09","Practical","Present",NULL),
 
     --FOR REPEAT STUDENTS
-
+INSERT INTO attendance VALUES  
     ("TG/2019/854","ICT1212","DpICT",NULL,"Practical","Present",NULL),
     ("TG/2019/854","ICT1212","DpICT",NULL,"Practical","Present",NULL),
     ("TG/2019/854","ICT1212","DpICT",NULL,"Practical","Present",NULL),

@@ -187,9 +187,6 @@ INSERT INTO attendance VALUES
     ("TG/2021/1050","ICT1233","DpICT","2024-03-25","Theory","Present",NULL),
     ("TG/2021/1050","ICT1233","DpICT","2024-04-01","Theory","Present",NULL),
     ("TG/2021/1050","ICT1233","DpICT","2024-04-08","Theory","Present",NULL),
-
- --Repeaters five student
-
     ("TG/2019/854","ICT1233","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2019/854","ICT1233","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2019/854","ICT1233","DpICT",NULL,"Theory","Present",NULL),

@@ -189,10 +189,10 @@
     ("TG/2021/1050","ICT1222","DpICT","2024-03-19","Practical","Present",NULL),
     ("TG/2021/1050","ICT1222","DpICT","2024-03-27","Practical","Present",NULL),
     ("TG/2021/1050","ICT1222","DpICT","2024-04-03","Practical","Present",NULL),
-    ("TG/2021/1050","ICT1222","DpICT","2024-04-10","Practical","Present",NULL);
+    ("TG/2021/1050","ICT1222","DpICT","2024-04-10","Practical","Present",NULL),
 
     --for Repeat students
-
+ INSERT INTO attendance VALUES  
     ("TG/2019/854","ICT1222","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2019/854","ICT1222","DpICT",NULL,"Theory","Present",NULL),
     ("TG/2019/854","ICT1222","DpICT",NULL,"Theory","Present",NULL),

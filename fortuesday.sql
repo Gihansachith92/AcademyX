@@ -68,7 +68,7 @@ INSERT INTO attendance VALUES
     ("TG/2021/1024","ICT1212","DpICT","2024-02-13","Practical","Present",NULL),
     ("TG/2021/1024","ICT1212","DpICT","2024-02-20","Practical","Present",NULL),
     ("TG/2021/1024","ICT1212","DpICT","2024-03-26","Practical","Present",NULL),
-    ("TG/2021/1024","ICT1212","DpICT","2024-03-04","Practical","Present",NULL),
+    ("TG/2021/1024","ICT1212","DpICT","2024-03-04","Practical","Absent",NULL),
 
     ("TG/2021/1024","ICT1212","DpICT","2024-03-11","Practical","Present",NULL),
     ("TG/2021/1024","ICT1212","DpICT","2024-03-18","Practical","Present",NULL),
@@ -90,7 +90,7 @@ INSERT INTO attendance VALUES
     ("TG/2021/1027","ICT1212","DpICT","2024-03-04","Practical","Present",NULL),
 
     ("TG/2021/1027","ICT1212","DpICT","2024-03-11","Practical","Present",NULL),
-    ("TG/2021/1027","ICT1212","DpICT","2024-03-18","Practical","Present",NULL),
+    ("TG/2021/1027","ICT1212","DpICT","2024-03-18","Practical","Absent",NULL),
     ("TG/2021/1027","ICT1212","DpICT","2024-03-26","Practical","Present",NULL),
     ("TG/2021/1027","ICT1212","DpICT","2024-04-02","Practical","Present",NULL),
     ("TG/2021/1027","ICT1212","DpICT","2024-04-09","Practical","Present",NULL),

@@ -189,3 +189,100 @@ INSERT INTO attendance VALUES
     ("TG/2021/1050","TCS1212","DpMUL","2024-04-11","Theory","Present",NULL);
 
 
+
+    --for Repeaters
+
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/854","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2019/866","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    
+
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/945","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    
+
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/972","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    
+
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL),
+    ("TG/2020/980","TCS1212","DpMUL",NULL,"Theory","Present",NULL);
+
+

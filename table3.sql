@@ -1,28 +1,3 @@
-   -- Exam table creation
-
-  CREATE TABLE Exam(
-        ExamID VARCHAR(20),
-        mid VARCHAR(20),
-        final VARCHAR(20),
-        marks VARCHAR(20),
-        stuID VARCHAR(20),
-        PRIMARY KEY(ExamID),
-        FOREIGN KEY (stuID) REFERENCES Student(stuID)
-         );
-
-
-
-
-   -- admin table creation
-
-     CREATE TABLE admin(
-         adminID VARCHAR(20),
-         AdminName VARCHAR(20),
-         NIC INT,
-         PRIMARY KEY(adminID),
-         FOREIGN KEY (NIC) REFERENCES User(NIC)
-         );
-
 
    -- Department table creation
 

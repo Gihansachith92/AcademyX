@@ -390,3 +390,10 @@ INSERT INTO ExamMarks VALUES
       ( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/678"  , "ICT1212","DpICT"),
       ( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2018/645"  , "ICT1212","DpICT"),
       ( 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , "TG/2017/415"  , "ICT1212","DpICT");
+
+select stuID,courseID,DepID,sessionDate,sessionType,A_status,MeidcalID from attendance
+where stuID = "TG/2021/1011" AND courseID ="ENG1222" AND DepID = "DpMUL";
+
+SELECT stuID,courseID,count(A_status)/15 *100 as "Precentage" from attendance
+where StuID = "TG/2021/1011" AND courseID = "ENG1222" AND DepID = "DpMUL"
+GROUP BY A_status;

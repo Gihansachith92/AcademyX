@@ -4,26 +4,208 @@
 SELECT QUIZ1,QUIZ2,QUIZ3,CONCAT((((QUIZ1+QUIZ2+QUIZ3)/300)*100) * 0.2) AS "20% QUIZES PRECENTAGE",Assesments,CONCAT(Assesments * 0.35) AS "35% Assesments",MidTheory,CONCAT(MidTheory * 0.45) AS "45% Assesments",CONCAT(((MidTheory * 0.45)+(Assesments * 0.35)+(((QUIZ1+QUIZ2+QUIZ3)/300)*100) * 0.2)) AS "##% ",StuID,courseID,DepID,IF(((MidTheory * 0.45)+(Assesments * 0.35)+(((QUIZ1+QUIZ2+QUIZ3)/300)*100) * 0.2) >= 50 ,"Passed","Failed") AS "elibility" FROM exammarks
 where depID = "DpMUL" and courseID ="ENG1222";
 
-+-------+-------+-------+-----------------------+------------+----------------+-----------+----------------+----------+--------------+----------+-------+-----------+
-| QUIZ1 | QUIZ2 | QUIZ3 | 20% QUIZES PRECENTAGE | Assesments | 35% Assesments | MidTheory | 45% Assesments | ##%      | StuID        | courseID | DepID | elibility |
-+-------+-------+-------+-----------------------+------------+----------------+-----------+----------------+----------+--------------+----------+-------+-----------+
-|    85 |    65 |    70 | 14.66667              |         70 | 24.50          |        65 | 29.25          | 68.41667 | TG/2021/1011 | ENG1222  | DpMUL | Passed    |
-|    84 |    75 |    60 | 14.60000              |         45 | 15.75          |        70 | 31.50          | 61.85000 | TG/2021/1020 | ENG1222  | DpMUL | Passed    |
-|    60 |    70 |    65 | 13.00000              |         60 | 21.00          |        70 | 31.50          | 65.50000 | TG/2021/1014 | ENG1222  | DpMUL | Passed    |
-|    70 |    80 |    40 | 12.66667              |         45 | 15.75          |        80 | 36.00          | 64.41667 | TG/2021/1024 | ENG1222  | DpMUL | Passed    |
-|    80 |    85 |    45 | 14.00000              |         50 | 17.50          |        65 | 29.25          | 60.75000 | TG/2021/1027 | ENG1222  | DpMUL | Passed    |
-|    90 |    75 |    30 | 13.00000              |         35 | 12.25          |        75 | 33.75          | 59.00000 | TG/2021/1031 | ENG1222  | DpMUL | Passed    |
-|    65 |    70 |    55 | 12.66667              |         45 | 15.75          |        20 | 9.00           | 37.41667 | TG/2021/1036 | ENG1222  | DpMUL | Failed    |
-|    75 |    65 |    65 | 13.66667              |         70 | 24.50          |        80 | 36.00          | 74.16667 | TG/2021/1042 | ENG1222  | DpMUL | Passed    |
-|    70 |    60 |    55 | 12.33333              |         90 | 31.50          |        85 | 38.25          | 82.08333 | TG/2021/1045 | ENG1222  | DpMUL | Passed    |
-|    85 |    75 |    75 | 15.66667              |         75 | 26.25          |        90 | 40.50          | 82.41667 | TG/2021/1050 | ENG1222  | DpMUL | Passed    |
-|    60 |    55 |    65 | 12.00000              |         50 | 17.50          |        55 | 24.75          | 54.25000 | TG/2020/980  | ENG1222  | DpMUL | Passed    |
-|    60 |    70 |    40 | 11.33333              |         55 | 19.25          |        75 | 33.75          | 64.33333 | TG/2020/972  | ENG1222  | DpMUL | Passed    |
-|    30 |    65 |    45 | 9.33333               |         45 | 15.75          |        60 | 27.00          | 52.08333 | TG/2020/945  | ENG1222  | DpMUL | Passed    |
-|    70 |    65 |    55 | 12.66667              |         40 | 14.00          |        90 | 40.50          | 67.16667 | TG/2019/866  | ENG1222  | DpMUL | Passed    |
-|    85 |    75 |    55 | 14.33333              |         60 | 21.00          |        70 | 31.50          | 66.83333 | TG/2019/854  | ENG1222  | DpMUL | Passed    |
-|     0 |     0 |     0 | 0.00000               |          0 | 0.00           |         0 | 0.00           | 0.00000  | TG/2018/678  | ENG1222  | DpMUL | Failed    |
-|     0 |     0 |     0 | 0.00000               |          0 | 0.00           |         0 | 0.00           | 0.00000  | TG/2018/645  | ENG1222  | DpMUL | Failed    |
-|     0 |     0 |     0 | 0.00000               |          0 | 0.00           |         0 | 0.00           | 0.00000  | TG/2017/415  | ENG1222  | DpMUL | Failed    |
-+-------+-------+-------+-----------------------+------------+----------------+-----------+----------------+----------+--------------+----------+-------+-----------+
-18 rows in set (0.00 sec)
+--attendance details
+CREATE TABLE attendance (
+    stuID VARCHAR(20),
+    courseID VARCHAR(20),
+    DepID VARCHAR(20),
+    sessionDate DATE,
+    sessionType ENUM('Theory', 'Practical', 'Combined'),
+    A_status ENUM('Present', 'Absent'),
+    MeidcalID VARCHAR(20), 
+    FOREIGN KEY (stuID) REFERENCES student(stuID),
+    FOREIGN KEY (courseID) REFERENCES course(courseID),
+    FOREIGN KEY (DepID) REFERENCES Department(DepID),
+    FOREIGN KEY (MeidcalID) REFERENCES Medical(MeidcalID));
+
+--english for monday
+
+INSERT INTO attendance VALUES 
+    ("TG/2021/1011","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-01-08","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1011","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-02-19","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-03-04","Theory","Present",NULL),
+
+    ("TG/2021/1011","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-03-25","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1011","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
+
+ 
+    ("TG/2021/1020","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-01-08","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1020","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-02-19","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-03-04","Theory","Absent",NULL),
+
+    ("TG/2021/1020","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-03-25","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1020","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
+
+   
+    ("TG/2021/1014","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-01-08","Theory","Absent",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1014","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-02-19","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-03-04","Theory","Present",NULL),
+
+    ("TG/2021/1014","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-03-25","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1014","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
+
+ 
+    ("TG/2021/1024","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-01-08","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1024","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-02-19","Theory","Absent",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-03-04","Theory","Present",NULL),
+
+    ("TG/2021/1024","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-03-25","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1024","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
+
+ 
+    ("TG/2021/1027","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-01-08","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1027","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-02-19","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-03-04","Theory","Present",NULL),
+
+    ("TG/2021/1027","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-03-25","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1027","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
+
+    
+   
+    ("TG/2021/1031","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-01-08","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1031","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-02-19","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-03-04","Theory","Present",NULL),
+
+    ("TG/2021/1031","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-03-25","Theory","Absent",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1031","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
+
+ 
+    ("TG/2021/1036","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-01-08","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1036","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-02-19","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-03-04","Theory","Present",NULL),
+
+    ("TG/2021/1036","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-03-25","Theory","Absent",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1036","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
+
+
+    ("TG/2021/1042","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-01-08","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1042","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-02-19","Theory","Absent",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-03-04","Theory","Present",NULL),
+
+    ("TG/2021/1042","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-03-25","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1042","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
+
+  
+    ("TG/2021/1045","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-01-08","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1045","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-02-19","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-03-04","Theory","Present",NULL),
+
+    ("TG/2021/1045","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-03-25","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1045","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL),
+
+    ("TG/2021/1050","ENG1222","DpMUL","2024-01-01","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-01-08","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-01-15","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-01-22","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-01-29","Theory","Present",NULL),
+
+    ("TG/2021/1050","ENG1222","DpMUL","2024-02-05","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-02-12","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-02-19","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-03-26","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-03-04","Theory","Present",NULL),
+
+    ("TG/2021/1050","ENG1222","DpMUL","2024-03-11","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-03-18","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-03-25","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-04-01","Theory","Present",NULL),
+    ("TG/2021/1050","ENG1222","DpMUL","2024-04-08","Theory","Present",NULL);

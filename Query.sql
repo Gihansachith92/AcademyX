@@ -93,3 +93,18 @@ SELECT e.stuid, e.courseid, e.depid,
 FROM exammarks e
 INNER JOIN student s ON e.stuid = s.stuid
 WHERE s.states != 'suspended';
+
+
+
+
+
+-- Create the StudentFinal_Marks view
+create view StudentFinal_Marks AS
+select c.stuid, c.courseid, c.depid, (c.CA_Marks + e.EndMark) as FinalMark
+from studentca_marks c, StudentEnd_Marks e 
+where c.Eligibility_Status = 'Eligible' and 
+c.stuid = e.stuid and
+c.courseid = e.courseid and
+c.depid = e.depid;
+
+

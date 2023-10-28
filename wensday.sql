@@ -4,8 +4,6 @@
 
 --for wensday 
 
-
-
 INSERT INTO attendance VALUES 
     ("TG/2021/1011","ICT1242","DpICT","2024-01-03","Theory","Present",NULL),
     ("TG/2021/1011","ICT1242","DpICT","2024-01-10","Theory","Present",NULL),

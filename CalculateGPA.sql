@@ -45,35 +45,30 @@ SELECT stuid, ROUND(sum(result)/19, 2)
 
 --1 
 
-Create view papercut as
-SELECT x.stuid, x.courseid, x.depid, x.grade, x.Grade_Point, y.Credit , CONCAT(Grade_Point*Credit) as "result"
+Create view GradeCreaditMulSGPA as
+SELECT x.stuid, x.courseid, x.depid, x.grade, x.Grade_Point, y.Credit , CONCAT(Grade_Point*Credit) as "CreditMulSGPA"
 FROM studentgradepoint as x
 INNER JOIN course as y ON x.courseid = y.courseid;
  
- --2 for sum
-
-SELECT stuid,sum(result) from papercut
-GROUP BY stuid;
 
 --3 for gpa
-SELECT stuid, ROUND(sum(result)/19, 2) as "SGPA"
-FROM papercut
+Create view StudentSGPA
+SELECT stuid, ROUND(sum(CreditMul)/19, 2) as "SGPA"
+FROM GradeCreaditMul
 GROUP BY stuid
-ORDER BY ROUND(sum(result)/19, 2);
+ORDER BY ROUND(sum(CreditMul)/19, 2);
 
 
 --For CGPA
 
-Create view papercut2 as
-SELECT x.stuid, x.courseid, x.depid, x.grade, x.Grade_Point, y.Credit , CONCAT(Grade_Point*Credit) as "resultOFCGPA"
+Create view GradeCreaditMulCGPA as
+SELECT x.stuid, x.courseid, x.depid, x.grade, x.Grade_Point, y.Credit , CONCAT(Grade_Point*Credit) as "CreditMulCGPA"
 FROM studentgradepoint as x
 INNER JOIN course as y ON x.courseid = y.courseid
 where  x.courseid != "ENG1222";
 
-SELECT stuid,sum(resultOFCGPA) from papercut2
-GROUP BY stuid;
 
-SELECT stuid, ROUND(sum(resultOFCGPA)/19, 2) as "CGPA"
+SELECT stuid, ROUND(sum(CreditMulCGPA)/19, 2) as "CGPA"
 FROM papercut2
 GROUP BY stuid
-ORDER BY ROUND(sum(resultOFCGPA)/19, 2);
+ORDER BY ROUND(sum(CreditMulCGPA)/19, 2);

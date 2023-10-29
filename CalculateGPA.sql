@@ -53,10 +53,10 @@ INNER JOIN course as y ON x.courseid = y.courseid;
 
 --3 for gpa
 Create view StudentSGPA AS
-SELECT stuid, ROUND(sum(CreditMul)/19, 2) as "SGPA"
+SELECT stuid, ROUND(sum(CreditMulSGPA)/19, 2) as "SGPA"
 FROM GradeCreaditMulSGPA
 GROUP BY stuid
-ORDER BY ROUND(sum(CreditMul)/19, 2);
+ORDER BY ROUND(sum(CreditMulSGPA)/19, 2);
 
 
 --For CGPA

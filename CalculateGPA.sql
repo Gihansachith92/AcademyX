@@ -52,8 +52,8 @@ INNER JOIN course as y ON x.courseid = y.courseid;
  
 
 --3 for gpa
-Create view StudentSGPA
-SELECT stuid, ROUND(sum(CreditMul)/19, 2) as "SGPA"
+Create view StudentSGPA AS
+AS SELECT stuid, ROUND(sum(CreditMul)/19, 2) as "SGPA"
 FROM GradeCreaditMul
 GROUP BY stuid
 ORDER BY ROUND(sum(CreditMul)/19, 2);
@@ -67,7 +67,7 @@ FROM studentgradepoint as x
 INNER JOIN course as y ON x.courseid = y.courseid
 where  x.courseid != "ENG1222";
 
-
+Create view StudentCGPA AS
 SELECT stuid, ROUND(sum(CreditMulCGPA)/19, 2) as "CGPA"
 FROM papercut2
 GROUP BY stuid

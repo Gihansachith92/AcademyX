@@ -19,3 +19,7 @@ CALL Attendance_Percentage1 ('TG/2021/1014', 'ICT1253')//
 -- Create View retrive all notice
 CREATE VIEW notices AS
 SELECT * FROM notice ORDER BY Date DESC;
+
+
+SELECT StuID,courseID,(COUNT(Date)/15)*100 AS "80%Percentage" , IF((COUNT(Date)/15 * 100)>=80,"Eligible","Not Eligible") As "Eligiblity"
+FROM Attendance ;

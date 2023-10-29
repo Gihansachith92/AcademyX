@@ -160,3 +160,82 @@ select  stuid, courseid, depid ,
 from studentfinal_marks;
 
 
+
+
+-- create the StudentGradePoint view with repeater marks reduced
+create view StudentGradePoint AS 
+SELECT 
+    stuid, 
+    courseid, 
+    depid,
+    CASE
+        WHEN stuid LIKE 'TG/2021/%' THEN
+            CASE
+                WHEN FinalMark >= 85 AND FinalMark <= 100 THEN 'A+'
+                WHEN FinalMark >= 80 AND FinalMark <= 84.999999 THEN 'A'
+                WHEN FinalMark >= 75 AND FinalMark <= 79.999999 THEN 'A-'
+                WHEN FinalMark >= 70 AND FinalMark <= 74.999999 THEN 'B+'
+                WHEN FinalMark >= 65 AND FinalMark <= 69.999999 THEN 'B'
+                WHEN FinalMark >= 60 AND FinalMark <= 64.999999 THEN 'B-'
+                WHEN FinalMark >= 55 AND FinalMark <= 59.999999 THEN 'C+'
+                WHEN FinalMark >= 50 AND FinalMark <= 54.999999 THEN 'C'
+                WHEN FinalMark >= 45 AND FinalMark <= 49.999999 THEN 'C-'
+                WHEN FinalMark >= 40 AND FinalMark <= 44.999999 THEN 'D+'
+                WHEN FinalMark >= 35 AND FinalMark <= 39.999999 THEN 'D'
+                WHEN FinalMark >= 0 AND FinalMark <= 34.999999 THEN 'F'
+                ELSE 'Not_Valid'
+            END
+        ELSE
+            CASE
+                WHEN FinalMark >= 85 AND FinalMark <= 100 THEN 'C'
+                WHEN FinalMark >= 80 AND FinalMark <= 84.999999 THEN 'C'
+                WHEN FinalMark >= 75 AND FinalMark <= 79.999999 THEN 'C'
+                WHEN FinalMark >= 70 AND FinalMark <= 74.999999 THEN 'C'
+                WHEN FinalMark >= 65 AND FinalMark <= 69.999999 THEN 'C'
+                WHEN FinalMark >= 60 AND FinalMark <= 64.999999 THEN 'C'
+                WHEN FinalMark >= 55 AND FinalMark <= 59.999999 THEN 'C'
+                WHEN FinalMark >= 50 AND FinalMark <= 54.999999 THEN 'C'
+                WHEN FinalMark >= 45 AND FinalMark <= 49.999999 THEN 'C-'
+                WHEN FinalMark >= 40 AND FinalMark <= 44.999999 THEN 'D+'
+                WHEN FinalMark >= 35 AND FinalMark <= 39.999999 THEN 'D'
+                WHEN FinalMark >= 0 AND FinalMark <= 34.999999 THEN 'F'
+                ELSE 'Not_Valid'
+            END
+    END AS 'Grade',
+    
+    CASE
+        WHEN stuid LIKE 'TG/2021/%' THEN
+            CASE
+                WHEN FinalMark >= 85 AND FinalMark <= 100 THEN 4.0
+                WHEN FinalMark >= 80 AND FinalMark <= 84.999999 THEN 4.0
+                WHEN FinalMark >= 75 AND FinalMark <= 79.999999 THEN 3.7
+                WHEN FinalMark >= 70 AND FinalMark <= 74.999999 THEN 3.3
+                WHEN FinalMark >= 65 AND FinalMark <= 69.999999 THEN 3.0
+                WHEN FinalMark >= 60 AND FinalMark <= 64.999999 THEN 2.7
+                WHEN FinalMark >= 55 AND FinalMark <= 59.999999 THEN 2.3
+                WHEN FinalMark >= 50 AND FinalMark <= 54.999999 THEN 2.0
+                WHEN FinalMark >= 45 AND FinalMark <= 49.999999 THEN 1.7
+                WHEN FinalMark >= 40 AND FinalMark <= 44.999999 THEN 1.3
+                WHEN FinalMark >= 35 AND FinalMark <= 39.999999 THEN 1.0
+                WHEN FinalMark >= 0 AND FinalMark <= 34.999999 THEN 0
+                ELSE 'Not_Valid'
+            END
+        ELSE
+            CASE
+                WHEN FinalMark >= 85 AND FinalMark <= 100 THEN 2.0
+                WHEN FinalMark >= 80 AND FinalMark <= 84.999999 THEN 2.0
+                WHEN FinalMark >= 75 AND FinalMark <= 79.999999 THEN 2.0
+                WHEN FinalMark >= 70 AND FinalMark <= 74.999999 THEN 2.0
+                WHEN FinalMark >= 65 AND FinalMark <= 69.999999 THEN 2.0
+                WHEN FinalMark >= 60 AND FinalMark <= 64.999999 THEN 2.0
+                WHEN FinalMark >= 55 AND FinalMark <= 59.999999 THEN 2.0
+                WHEN FinalMark >= 50 AND FinalMark <= 54.999999 THEN 2.0
+                WHEN FinalMark >= 45 AND FinalMark <= 49.999999 THEN 1.7
+                WHEN FinalMark >= 40 AND FinalMark <= 44.999999 THEN 1.3
+                WHEN FinalMark >= 35 AND FinalMark <= 39.999999 THEN 1.0
+                WHEN FinalMark >= 0 AND FinalMark <= 34.999999 THEN 0
+                ELSE 'Not_Valid'
+            END
+    END AS 'Grade_Point'
+FROM studentfinal_marks;
+

@@ -19,7 +19,7 @@ CREATE TABLE attendance (
     FOREIGN KEY (MeidcalID) REFERENCES Medical(MeidcalID));
 
 
-
+CREATE VIEW attendance_eligibility AS
 SELECT stuID, courseID,sessionType, COUNT(A_status)/15 * 100 AS "80% Percentage" , IF((COUNT(A_status)/15 * 100)>=80,"Eligible","Not Eligible") As "Eligiblity"
 FROM attendance
 WHERE A_status = "Present"

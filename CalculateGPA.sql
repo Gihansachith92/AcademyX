@@ -72,3 +72,8 @@ SELECT stuid, ROUND(sum(CreditMulCGPA)/19, 2) as "CGPA"
 FROM GradeCreaditMulCGPA
 GROUP BY stuid
 ORDER BY ROUND(sum(CreditMulCGPA)/19, 2);
+
+--sgpa and cgpa
+
+CREATE VIEW Student_SGPA_CGPA AS
+SELECT x.stuid AS "Student Number" , x.SGPA , y.CGPA FROM StudentSGPA AS x INNER JOIN StudentCGPA AS y ON x.stuid = y.stuid;

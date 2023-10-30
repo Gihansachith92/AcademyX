@@ -1,19 +1,19 @@
 --Admin - With All privileges with Grant Option for all the tables in the database
 CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'Ad1234';
-GRANT ALL PRIVILEGES ON project TO 'Admin'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON AcademyX TO 'Admin'@'localhost' WITH GRANT OPTION;
 
 
 
 --Dean - With All privileges without Grant for all the tables in the database
 
 CREATE USER 'Dean'@'localhost' IDENTIFIED BY 'De1234';
-GRANT ALL PRIVILEGES ON project TO 'Dean'@'localhost';
+GRANT ALL PRIVILEGES ON AcademyX TO 'Dean'@'localhost';
 
 
 
 --Lecturer – All privileges without Grant and user creation for all the tables in the database
 CREATE USER 'Lecturer'@'localhost' IDENTIFIED BY 'Le1234';
-GRANT SELECT, INSERT, UPDATE, DELETE ON project TO 'Lecturer'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE ON AcademyX TO 'Lecturer'@'localhost';
 
 
 

@@ -18,8 +18,6 @@ END;//
 CALL SubjectAttendance('TG/2021/1011', 'ENG1222');
 
 
-
-
 -- Attendance Percentage PROCEDURE
 
 CREATE PROCEDURE AttendancePercentage(
@@ -52,3 +50,25 @@ END;
 
 -- call procedure
 CALL StudentallsubjectEligibility('TG/1021/1020');
+
+
+
+-- check each subject quize marks
+
+CREATE PROCEDURE CheckSubjectQuizemarks (IN pcourseID VARCHAR(20))
+BEGIN
+select * from StudentQuiz_Marks where courseID = pcourseID;
+END;
+
+-- call procedure
+CALL CheckSubjectQuizemarks('ICT1222');
+
+
+-- check each student all quize marks using view procedure 
+CREATE PROCEDURE CheckStudentQuizemarks (IN pstuID VARCHAR(20))
+BEGIN
+select * from StudentQuiz_Marks where stuID = pstuID;
+END;
+
+-- call procedure
+CALL CheckStudentQuizemarks('TG/2021/1020');

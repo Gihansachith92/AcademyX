@@ -117,6 +117,14 @@ END;
 
 CALL SubjectCAmarks('ENG1222');
 
+--------------------------------------------------------------------------------
+-- Student CA marks
+CREATE PROCEDURE StudentCAmarks(IN pstuID VARCHAR(20))
+BEGIN
+select * from StudentCA_marks where stuID=pstuID;
+END;
+
+CALL StudentCAmarks('TG/2021/1014);
 
 
 

@@ -107,3 +107,23 @@ END;
 
 -- call procedure
 CALL subjectMid_Mark('ICT1222');
+
+--------------------------------------------------------------------------------
+-- subject CA marks
+CREATE PROCEDURE SubjectCAmarks(IN pcourseID VARCHAR(20))
+BEGIN
+select * from StudentCA_marks where courseID=pcourseID;
+END;
+
+CALL SubjectCAmarks('ENG1222');
+
+
+
+
+
+
+
+
+
+
+

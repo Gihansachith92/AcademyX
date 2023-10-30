@@ -35,3 +35,20 @@ END;//
 
 -- call PROCEDURE
 CALL CalculateAttendancePercentage('TG/2021/1011', 'ENG1222');
+
+
+
+-- CREATE VIEW attendance_eligibility AS
+-- SELECT stuID, courseID,sessionType, COUNT(A_status)/15 * 100 AS "80% Percentage" , IF((COUNT(A_status)/15 * 100)>=80,"Eligible","Not Eligible") As "Eligiblity"
+-- FROM attendance
+-- WHERE A_status = "Present"
+-- GROUP BY stuID, courseID,sessionType;
+
+-- student attendance eligibility
+CREATE PROCEDURE StudentallsubjectEligibility (IN pstuID VARCHAR(20))
+BEGIN
+select * from attendance_eligibility where stuID = pstuID;
+END;
+
+-- call procedure
+CALL StudentallsubjectEligibility('TG/1021/1020');

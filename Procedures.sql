@@ -21,8 +21,6 @@ CALL SubjectAttendance('TG/2021/1011', 'ENG1222');
 --------------------------------------------------------------------------------
 
 -- Attendance Percentage PROCEDURE
-
-
 CREATE PROCEDURE CalculateAttendancePercentage(
     IN p_stuID VARCHAR(20),
     IN p_courseID VARCHAR(20),
@@ -124,14 +122,25 @@ BEGIN
 select * from StudentCA_marks where stuID=pstuID;
 END;
 
-CALL StudentCAmarks('TG/2021/1014);
+CALL StudentCAmarks('TG/2021/1014');
 
+--------------------------------------------------------------------------------
+-- student end marks
+CREATE PROCEDURE StudentEndMarks(IN pstuID VARCHAR(20))
+BEGIN
+select * from StudentEnd_Marks where stuID=pstuID;
+END;
 
+CALL StudentEndMarks('TG/2021/1014')
 
+--------------------------------------------------------------------------------
 
+CREATE PROCEDURE SubjectEndMarks(IN pcourseID VARCHAR(20))
+BEGIN
+select * from StudentEnd_Marks where courseID=pcourseID;
+END;
 
-
-
+CALL SubjectEndMarks('ENG1222')
 
 
 
